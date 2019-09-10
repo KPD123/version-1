@@ -2,22 +2,23 @@
 
 include_once("config.php");
 
-if(isset($_POST['Submi'])){
+if(isset($_POST['Submit'])){
     $nama = $_POST['nama'];
     $harga = $_POST['harga'];
     
-    $result = mysqli_query($mysqli, "INSERT INTO barangmainan(nama,harga)"
-            . "VALUES('$nama','$harga')")
+    $result = mysqli_query($mysqli, "INSERT INTO barangmainan(nama,harga)
+              VALUES('$nama','$harga')");
     
-    echo "<script>alert('Tambah maklumat berjaya');"
-    . "window.location='index.php'</script>";
+    echo "<script>alert('Tambah maklumat berjaya');
+    window.location='index.php'</script>";
     
-
-else
-{
+}
+else{
+}
     ?>
+
 <html>
-    <head
+    <head>
         <title>TAMBAH REKOD</title>
     </head>
     <body>
